@@ -26,6 +26,8 @@ public class KartyaTrukkKonzolon {
                 pakli[i++] = szin + "_" + ertekek[e];
             }
         }
+        
+        
 
     }
     
