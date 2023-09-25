@@ -1,4 +1,4 @@
-package kartyatrukkkonzolon;
+package modell;
 
 public class Pakli {
     
@@ -19,13 +19,15 @@ public class Pakli {
         }
     }
     
-    public void kirak(){
-         for (int i = 1; i < pakli.length; i++) {
-            System.out.printf("%-8s", pakli[i].getLeiras());
+    public String kirak(){
+        String txt = "";
+        for (int i = 1; i < pakli.length; i++) {
+            txt += "%-8s".formatted(pakli[i].getLeiras());
             if (i % 3 == 0) {
-                System.out.println("");
+                txt += "\n";
             }
         }
+        return txt;
     }
     public void kever(int oszlop){
         Lap[] ujPakli = new Lap[22];
@@ -54,7 +56,7 @@ public class Pakli {
         }
         this.pakli =  ujPakli;
     }
-    public void ezVolt(){
-        System.out.println("A választott lap: " + pakli[11].getLeiras());
+    public String ezVolt(){
+        return pakli[11].getLeiras();
     }
 }
